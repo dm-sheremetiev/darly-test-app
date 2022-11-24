@@ -1,0 +1,49 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "John",
+      "surname": "Marston",
+      "age": 21,
+      "salary": 500,
+      "position": "React Developer",
+      "email": "dmytriy.sheremetiev@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Arthur",
+      "surname": "Morgan",
+      "age": 44,
+      "salary": 5300,
+      "position": "Manager",
+      "email": "somemail@mail.ua"
+    },
+    {
+      "id": 3,
+      "name": "Miki",
+      "surname": "Bell",
+      "age": 33,
+      "salary": 100,
+      "position": "Rat",
+      "email": "rat@mail.ua"
+    },
+    {
+      "id": 4,
+      "name": "Dutch",
+      "surname": "Van der Linde",
+      "age": 65,
+      "salary": 6500,
+      "position": "CEO",
+      "email": "dutch@mail.com"
+    },
+    {
+      "id": 5,
+      "name": "Bella",
+      "surname": "Thorn",
+      "age": 34,
+      "salary": 32323,
+      "position": "PM",
+      "email": "thorn@mail.ua"
+    }
+  ]
+}

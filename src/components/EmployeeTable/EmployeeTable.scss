@@ -1,0 +1,10 @@
+.table {
+  align-self: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__delete-row {
+    margin-top: 20px;
+  }
+}
