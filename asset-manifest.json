@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/darly-test-app/static/css/main.2192ce42.css",
-    "main.js": "/darly-test-app/static/js/main.d138a39d.js",
+    "main.js": "/darly-test-app/static/js/main.cea89966.js",
     "index.html": "/darly-test-app/index.html",
     "main.2192ce42.css.map": "/darly-test-app/static/css/main.2192ce42.css.map",
-    "main.d138a39d.js.map": "/darly-test-app/static/js/main.d138a39d.js.map"
+    "main.cea89966.js.map": "/darly-test-app/static/js/main.cea89966.js.map"
   },
   "entrypoints": [
     "static/css/main.2192ce42.css",
-    "static/js/main.d138a39d.js"
+    "static/js/main.cea89966.js"
   ]
 }
