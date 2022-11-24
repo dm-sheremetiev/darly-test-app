@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.scss';
 
 import CircularProgress from '@mui/material/CircularProgress';
-import { client } from './helpers/fetchEmployees';
+import { client } from './api/fetchEmployees';
 import { Employee } from './types/Employee';
 import { EmployeeTable } from './components/EmployeeTable';
 import { NewEmployeeForm } from './components/NewEmployeeForm';

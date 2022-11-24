@@ -24,7 +24,7 @@ import {
   Close,
 } from '@mui/icons-material';
 import './NewEmployeeForm.scss';
-import { client } from '../../helpers/fetchEmployees';
+import { client } from '../../api/fetchEmployees';
 
 type Props = {
   setEmployees: React.Dispatch<React.SetStateAction<Employee[] | undefined>>,

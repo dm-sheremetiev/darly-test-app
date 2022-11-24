@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { DataGrid, GridColDef, GridSelectionModel } from '@mui/x-data-grid';
 import Button from '@mui/material/Button';
-import { CircularProgress, Collapse, Alert, IconButton} from '@mui/material';
+import { CircularProgress, Collapse, Alert, IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Employee } from '../../types/Employee';
 import { Close } from '@mui/icons-material';
 
 import './EmployeeTable.scss';
-import { client } from '../../helpers/fetchEmployees';
+import { client } from '../../api/fetchEmployees';
 
 type Props = {
   employees: Employee[],
@@ -31,19 +31,19 @@ export const EmployeeTable: React.FC<Props> = ({
     { field: 'email', headerName: 'Email', width: 300 },
   ];
 
-  const handleDeleteButton = () => {
-    setIsLoading(true);
-    selectedEmployeesId.map(id => {
-      client.delete('/employees/' + id)
-        .then(() => {
-          const leftEmployees = employees.filter(employee => !selectedEmployeesId.includes(employee.id));
+  const handleDeleteButton = async () => {
+    setIsLoading(prev => !prev);
 
-          setEmployees(leftEmployees);
-        })
-        .catch(() => setIsDeleteError(true));
-    });
+    Promise.all(selectedEmployeesId.map(id => {
+      client.delete('/employees/' + id);
+    }))
+      .then(() => {
+        const leftEmployees = employees.filter(employee => !selectedEmployeesId.includes(employee.id));
 
-    setIsLoading(false);
+        setEmployees(leftEmployees);
+      })
+      .catch(() => setIsDeleteError(true))
+      .finally(() => setIsLoading(prev => !prev));
   };
 
   return (
